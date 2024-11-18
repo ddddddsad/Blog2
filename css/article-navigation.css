@@ -1,0 +1,53 @@
+.article-navigation {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: max-height 0.5s ease-in-out; /* 添加过渡效果 */
+    max-height: 500px; /* 展开时的最大高度，可以根据内容调整 */
+    overflow: hidden; /* 隐藏超出的内容 */
+}
+
+.article-navigation.collapsed {
+    max-height: 50px; /* 折叠时的最大高度，只显示Menu */
+}
+
+.article-navigation ul {
+    list-style-type: none;
+    padding: 0;
+    transition: opacity 0.5s ease-in-out; /* 过渡效果 */
+    opacity: 1;
+}
+
+.article-navigation.collapsed ul {
+    opacity: 0; /* 折叠时隐藏内容，过渡效果 */
+    pointer-events: none; /* 禁止点击事件，避免隐藏时误点击 */
+}
+
+.article-navigation ul h2, .article-navigation ul h3 {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.article-navigation ul h3 {
+    margin-left: 20px;
+    font-size: 12px;
+}
+
+.toggleArea {
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.toggleArea:hover {
+    background-color: #0056b3;
+}
